@@ -10,9 +10,11 @@
   "author": "furysun",
   "license": "ISC",
   "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
-    "html-webpack-plugin": "^3.2.0",
     "webpack-dev-server": "^3.1.11"
   }
 }

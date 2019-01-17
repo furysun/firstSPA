@@ -2,7 +2,7 @@ const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './index.js',
     output: {
         path: path.resolve(__dirname, './build'),
         filename: 'bundle.js'
@@ -15,7 +15,23 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: true,
             template: 'index.html'
-        })
+        }),
     ],
-    devtool: 'eval-source-map'
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: 'style-loader'
+                    }, {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }],
+            },
+        ],
+    },
+    devtool: 'source-map'
 };

@@ -1,3 +1,3 @@
-import {displayIndexPage} from "./src/indexPage";
+import {displayIndexPage} from "./src/mainPage";
 
 displayIndexPage();

@@ -1,28 +1,37 @@
 import css from './mainPage.css';
+import {displayLoginPage} from "./login/loginPage";
+import {displayRegistrationPage} from "./reg/registration";
+import {navigate} from "./config/router";
+
 
 export function displayIndexPage() {
 
+    var user = {
+        name: 'cat',
+        age: 12,
+        money: 10
+    };
+
     var template = `
-    <button>login</button>
-    <button>registration</button>
+    <h1>Hello, ${user.name} ${user.age + user.money}</h1>
+
+    <button id="goToLogin">login</button>
+    <button id="goToRegistration">registration</button>
     <p> test1 </p>
     <p id="demo"></p>
     
     
     <input type="text" id="testButton"/>
     
-    <button id="clickMe">click me </button>
-    
-    `;
+    <button id="clickMe">click me </button>;`;
 
     document.getElementById("content").innerHTML = template;
-    document.getElementById("demo").innerHTML = "Hello World!";
-    document.write(Date());
-    document.write('asdasdasdasdas');
 
-    document.getElementById("clickMe").onclick = click;
-}
+    document.getElementById("goToLogin").onclick = function () {
+        navigate("/login")
+    };
 
-function click(){
-    console.log('click');
+    document.getElementById("goToRegistration").onclick = function () {
+        navigate("/registration")
+    };
 }

@@ -1,16 +1,19 @@
 import {displayIndexPage} from "../mainPage";
 import {displayLoginPage} from "../login/loginPage";
-import {displayRegistrationPage} from "../reg/registration";
+import {displayRegistrationPage} from "../registration/registration";
+import {displaySuccessPage} from "../registration/succsess/successPage";
 
 var routs = {
     "/": displayIndexPage,
-    "/login":displayLoginPage,
-    "/registration":displayRegistrationPage
+    "/login": displayLoginPage,
+    "/registration": displayRegistrationPage,
+    "/success": displaySuccessPage
 };
 
-export function init() {
+export function routerInit() {
     window.addEventListener('popstate', function (event) {
-        routs[event.currentTarget.location.pathname]();
+        let url = event.currentTarget.location.pathname;
+        routs[url]();
     });
 }
 

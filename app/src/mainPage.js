@@ -1,6 +1,3 @@
-import css from './mainPage.css';
-import {displayLoginPage} from "./login/loginPage";
-import {displayRegistrationPage} from "./reg/registration";
 import {navigate} from "./config/router";
 
 
@@ -27,11 +24,14 @@ export function displayIndexPage() {
 
     document.getElementById("content").innerHTML = template;
 
-    document.getElementById("goToLogin").onclick = function () {
-        navigate("/login")
-    };
+    document.getElementById("goToLogin").onclick = goToLogin;
+    document.getElementById("goToRegistration").onclick = goToRegistration;
+}
 
-    document.getElementById("goToRegistration").onclick = function () {
-        navigate("/registration")
-    };
+function goToLogin() {
+    navigate("/login");
+}
+
+function goToRegistration() {
+    navigate("/registration");
 }

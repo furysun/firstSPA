@@ -1,4 +1,6 @@
 export function displayLoginPage() {
+    var headerTemplate = `<h1>Header</h1>`;
+
     var template = `
     <form >
         <p>
@@ -12,5 +14,5 @@ export function displayLoginPage() {
     </form>`;
 
 
-    document.getElementById("content").innerHTML = template;
+    document.getElementById("container").innerHTML = template;
 }

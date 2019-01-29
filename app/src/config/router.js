@@ -1,7 +1,7 @@
 import {displayIndexPage} from "../mainPage";
 import {displayLoginPage} from "../login/loginPage";
 import {displayRegistrationPage} from "../registration/registration";
-import {displaySuccessPage} from "../registration/succsess/successPage";
+import {displaySuccessPage} from "../succsess/successPage";
 
 var routs = {
     "/": displayIndexPage,

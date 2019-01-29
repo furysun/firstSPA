@@ -1,4 +1,5 @@
 import {navigate} from "./config/router";
+import {getHeader} from "./shared/header";
 
 
 export function displayIndexPage() {
@@ -9,7 +10,11 @@ export function displayIndexPage() {
         money: 10
     };
 
+    var header = getHeader();
+
     var template = `
+${header} 
+<div id="content">
     <h1>Hello, ${user.name} ${user.age + user.money}</h1>
 
     <button id="goToLogin">login</button>
@@ -20,9 +25,12 @@ export function displayIndexPage() {
     
     <input type="text" id="testButton"/>
     
-    <button id="clickMe">click me </button>;`;
+    <button id="clickMe">click me </button>;
+    </div>`;
 
-    document.getElementById("content").innerHTML = template;
+
+    document.getElementById("container").innerHTML = template;
+    // document.getElementById("container").childNodes.
 
     document.getElementById("goToLogin").onclick = goToLogin;
     document.getElementById("goToRegistration").onclick = goToRegistration;

@@ -1,8 +1,11 @@
 import {navigate} from "./config/router";
 import {getHeader} from "./shared/header";
+import {getFooter} from "./shared/footer";
 
 
 export function displayIndexPage() {
+    var header = getHeader();
+    var footer = getFooter();
 
     var user = {
         name: 'cat',
@@ -10,28 +13,19 @@ export function displayIndexPage() {
         money: 10
     };
 
-    var header = getHeader();
-
-    var template = `
+    var template =`
 ${header} 
-<div id="content">
+    <div id="content">
     <h1>Hello, ${user.name} ${user.age + user.money}</h1>
 
-    <button id="goToLogin">login</button>
-    <button id="goToRegistration">registration</button>
-    <p> test1 </p>
+    <button class="style-button" id="goToLogin">login</button>
+    <p>
+    <button class="style-button" id="goToRegistration">registration</button>
     <p id="demo"></p>
-    
-    
-    <input type="text" id="testButton"/>
-    
-    <button id="clickMe">click me </button>;
-    </div>`;
-
+    </div>\`;
+${footer} `;
 
     document.getElementById("container").innerHTML = template;
-    // document.getElementById("container").childNodes.
-
     document.getElementById("goToLogin").onclick = goToLogin;
     document.getElementById("goToRegistration").onclick = goToRegistration;
 }

@@ -7,13 +7,13 @@ export function displayIndexPage() {
     var header = getHeader();
     var footer = getFooter();
 
-    var user = {
+    const user = {
         name: 'cat',
         age: 12,
         money: 10
     };
 
-    var template =`
+    var template = `
 ${header} 
     <div id="content">
     <h1>Hello, ${user.name} ${user.age + user.money}</h1>
@@ -37,3 +37,5 @@ function goToLogin() {
 function goToRegistration() {
     navigate("/registration");
 }
+
+

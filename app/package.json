@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server --watch --mode development"
+    "start": "webpack-dev-server --mode development --history-api-fallback --watch"
   },
   "author": "furysun",
   "license": "ISC",

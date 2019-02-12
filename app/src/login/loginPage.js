@@ -45,6 +45,7 @@ function verify() {
     }
 }
 
+
 function goToUsers() {
     navigate("/users");
 }

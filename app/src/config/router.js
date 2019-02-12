@@ -22,5 +22,11 @@ export function routerInit() {
 
 export function navigate(url) {
     history.pushState({}, "", url);
-    routes[url]();
+    let displayPageFunction = routes[url];
+
+    if (displayPageFunction) {
+        displayPageFunction();
+    } else {
+        displayIndexPage();
+    }
 }

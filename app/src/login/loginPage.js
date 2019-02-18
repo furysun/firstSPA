@@ -15,18 +15,18 @@ export function displayLoginPage() {
     const template = `
     ${header}
     <form>
+    <div id="loginPage">
         <p>
-            <input id="login" placeholder=" login"  type="text" />
+            <input id="loginInput" placeholder=" login"  type="text" />
         </p>
         <p>
-            <input id="password" placeholder=" password"  type="password" />
+            <input id="passwordInput" placeholder=" password"  type="password" />
         </p>
-
         <input class="style-button" id="goToUsers" value="ok" name="ok"/>
-        
         <p hidden id="error-message">wrong login/password</p>
     </form>
-    ${footer}`;
+    ${footer}
+    </div>`;
 
 
     document.getElementById("container").innerHTML = template;
@@ -35,8 +35,8 @@ export function displayLoginPage() {
 
 function verify() {
 
-    const login = document.getElementById("login").value;
-    const password = document.getElementById("password").value;
+    const login = document.getElementById("loginInput").value;
+    const password = document.getElementById("passwordInput").value;
 
     if (user.login === login && user.password === password) {
         goToUsers();
@@ -44,7 +44,6 @@ function verify() {
         document.getElementById("error-message").hidden = false;
     }
 }
-
 
 function goToUsers() {
     navigate("/users");

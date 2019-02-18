@@ -30,15 +30,16 @@ const users = [
 
 export function displayUsersPage() {
     const template = `<h1>user</h1>
-    <table id="users" style="border-style: dashed">
+
+    <table id="users">
     </table>
-    
+
     <form>
-        <input id="id" type="text"/>
-        <input id="login" type="text"/>
-        <input id="password" type="text"/>
-        <input id="firstName" type="text"/>
-        <input id="dateOfBirth" type="date"/>
+        <input id="id" placeholder=" id" type="text"/>
+        <input id="login" placeholder=" login" type="text"/>
+        <input id="passwordPage" placeholder=" password" type="text"/>
+        <input id="firstName" placeholder=" firstName" type="text"/>
+        <input id="dateOfBirth" placeholder=" dateOfBirth" type="date"/>
         
             <select id="gender">
               <option value="f">f</option>
@@ -62,7 +63,6 @@ export function displayUsersPage() {
 function drawUserTable() {
     const table = document.getElementById("users");
     const headers = `   
-     <tr>
         <th> Id</th>
         <th> Name</th>
         <th> Password</th>
@@ -70,11 +70,6 @@ function drawUserTable() {
         <th> Date Of Birth</th>
         <th> Gender</th>
         <th> Active</th>
-     </tr>
-      <tr>
-        <td></td>
-        <td></td>
-      </tr>
     `;
 
     table.innerHTML = headers;
@@ -105,7 +100,7 @@ function drawUserTable() {
 function addUser() {
     const id = document.getElementById("id").value;
     const login = document.getElementById("login").value;
-    const password = document.getElementById("password").value;
+    const password = document.getElementById("passwordPage").value;
     const firstName = document.getElementById("firstName").value;
     const dateOfBirth = document.getElementById("dateOfBirth").value;
     const gender = document.getElementById("gender").value;
@@ -125,7 +120,7 @@ function addUser() {
     drawUserTable();
     document.getElementById("id").value = '';
     document.getElementById("login").value = '';
-    document.getElementById("password").value = '';
+    document.getElementById("passwordPage").value = '';
     document.getElementById("firstName").value = '';
     document.getElementById("dateOfBirth").value = '';
     document.getElementById("gender").value = '';

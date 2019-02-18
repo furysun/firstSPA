@@ -1,6 +1,3 @@
-/*h1{*/
-    /*background-color: pink;*/
-/*}*/
 
 #header{
     height: 46px;
@@ -23,7 +20,7 @@ li {
     color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none
+    text-decoration: none;
 }
 
 li:hover {
@@ -53,8 +50,6 @@ li:hover {
     margin: 5px;
 }
 
-
-
 #content{
     text-align: center;
 }
@@ -66,7 +61,57 @@ li:hover {
     color: white;
     background-color: crimson;
     border: none;
+    text-align: center;
 }
+#add{
+    width: 10%;
+    border-radius: 5px;
+    height: 50px;
+    color: white;
+    background-color: crimson;
+    border: none;
+    text-align: center;
+}
+
 h1{
     color: gray;
 }
+
+#loginPage{
+    text-align: center;
+    margin-top: 100px;
+}
+
+#passwordInput,#loginInput{
+    width: 30%;
+    padding: 12px 20px;
+    /*margin: 8px 0;*/
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;
+}
+
+#id,#login,#passwordPage,#firstName,#dateOfBirth{
+    width: 177px;
+    height: 30px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
